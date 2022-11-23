@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Artist</title>
+    <link rel="stylesheet" href="/css/generals.css" />
+  </head>
+
+  <body>
+    <%- include("./partials/Navbar.ejs") %>
+
+    <button
+      type="button"
+      class="btn btn-dark btn-insert-modal position-fixed"
+      data-bs-toggle="modal"
+      data-bs-target="#insertModal"
+      data-bs-title="Create new user"
+      style="right: 2em; bottom: 2em"
+    >
+      <i class="fa-solid fa-plus btn-insert-modal"></i>
+    </button>
+    <form action="/artist" method="post">
+        
+      <!-- Modal to create user -->
+      <div
+        class="modal fade"
+        id="insertModal"
+        tabindex="-1"
+        aria-labelledby="insertModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content p-5">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="insertModalLabel">
+                Insert Artist
+              </h1>
+              
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="mb-3">
+              <label for="artist_id-in" class="form-label">Artist ID</label>
+              <input
+                type="text"
+                class="form-control"
+                id="artist_id-in"
+                value=""
+                name="artist_id"
+                required
+                placeholder="Artist ID"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="artist_name-in" class="form-label">Artist Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="artist_name-in"
+                value=""
+                name="artist_name"
+                required
+                placeholder="Artist Name"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="Employee_id-in" class="form-label">Employee Id</label>
+              <input
+                type="text"
+                class="form-control"
+                id="employee_id-in"
+                value=""
+                name="employee_id"
+                required
+                placeholder="Employee ID"
+              />
+            </div>
+            <div class="mb-3">
+                <label for="art_type-in" class="form-label">Art Products</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="art_type-in"
+                  value=""
+                  name="art_type"
+                  required
+                  placeholder="Art Type"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="followers-in" class="form-label">Followers</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="followers-in"
+                  value=""
+                  name="followers"
+                  required
+                  placeholder="Followers"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="passion-in" class="form-label">Passion</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="passion-in"
+                  value=""
+                  name="passion"
+                  required
+                  placeholder="Passion"
+                />
+              </div>
+            <button type="submit" class="btn btn-success insert-submit-btn">
+              Submit
+            </button>
+            <p class="lead text-danger">Please enter unique artist id</p>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <!-- Modal to edit user -->
+    <div
+      class="modal fade"
+      id="editModal"
+      tabindex="-1"
+      aria-labelledby="editModalLabel"
+      aria-hidden="true"
+    >
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-5">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="insertModalLabel">
+              Edit Artist
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="mb-3">
+            <label for="artist_id" class="form-label">Artist ID</label>
+            <input
+              type="text"
+              class="form-control"
+              id="artist_id"
+              value=""
+              name="artist_id"
+              disabled
+              required
+              placeholder="Artist ID"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="artist_name" class="form-label">Artist Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="artist_name"
+              value=""
+              name="artist_name"
+              required
+              placeholder="Artist Name"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="Employee_id" class="form-label">Employee Id</label>
+            <input
+              type="text"
+              class="form-control"
+              id="employee_id"
+              value=""
+              name="employee_id"
+              required
+              disabled
+              placeholder="Employee ID"
+            />
+          </div>
+          <div class="mb-3">
+              <label for="art_type" class="form-label">Art Type</label>
+              <input
+                type="text"
+                class="form-control"
+                id="art_type"
+                value=""
+                name="art_type"
+                required
+                placeholder="Art Type"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="followers" class="form-label">Followers</label>
+              <input
+                type="text"
+                class="form-control"
+                id="followers"
+                value=""
+                name="followers"
+                required
+                placeholder="Followers"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="passion" class="form-label">Passion</label>
+              <input
+                type="text"
+                class="form-control"
+                id="passion"
+                value=""
+                name="passion"
+                required
+                placeholder="Passion"
+              />
+            </div>
+          <button type="submit" class="btn btn-success submit-btn">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid w-75 my-5">
+      <table class="table">
+        <thead class="bg-light">
+          <tr>
+            <th scope="col">Artist ID</th>
+            <th scope="col">Artist Name</th>
+            <th scope="col">Employee Id</th>
+            <th scope="col">Art Type</th>
+            <th scope="col">Followers</th>
+            <th scope="col">Passion</th>
+            <th scope="col">Edit Artist</th>
+            <th scope="col">Delete Artist</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </body>
+
+  <script>
+            var data = <%- JSON.stringify(data) %>;
+
+            console.log(data.rows[0]);
+            var table=``;
+            data.rows.forEach(row => {
+                table +=
+                `<tr>
+          <th scope="col">${row.artist_id}</th>
+          <td scope="col">${row.artist_name}</td>
+          <td scope="col">${row.employee_id}</td>
+          <td scope="col">${row.art_type}</td>
+          <td scope="col">${row.followers}</td>
+          <td scope="col">${row.passion}</td>
+          <td scope="col"><button type="button" data-artist=${row.artist_id} class="btn btn-dark btn-modal" data-bs-toggle="modal" data-bs-target="#editModal">
+              <i data-artist=${row.artist_id} class="fa-solid fa-pen-to-square btn-modal"></i>
+          </button>
+          </td>
+          <td scope="col">
+             <i role="button" data-artist=${row.artist_id} class="fa-solid fa-trash text-danger btn-delete p-2" ></i>
+          </td>
+        </tr>`
+            });
+
+
+         document.querySelector('.table').innerHTML += table;
+            var response = {};
+            document.querySelectorAll('.btn-modal').forEach((row)=>row.addEventListener('click', (e)=>{
+              let obj = undefined;
+              data.rows.forEach((row)=> {
+                if(row.artist_id === e.target.dataset.artist)
+                {
+                  obj = row;
+                  return;
+                }
+              })
+              response = obj;
+              document.querySelector('#artist_id').value =obj.artist_id
+              document.querySelector("#artist_name").value = obj.artist_name
+              document.querySelector("#employee_id").value = obj.employee_id;
+              document.querySelector("#art_type").value = obj.art_type;
+              document.querySelector("#followers").value = obj.followers;
+              document.querySelector("#passion").value = obj.passion;
+            }))
+
+    document.querySelector('.submit-btn').addEventListener('click', ()=> {
+      console.log("Hello");
+      console.log(data[0]);
+      response.artist_name = document.querySelector('#artist_name').value;
+      response.art_type = document.querySelector('#art_type').value;
+      response.followers = document.querySelector('#followers').value;
+      response.passion = document.querySelector('#passion').value;
+      if(response.artist_name!=='' && response.art_type!=='' && response.followers!=='' && response.passion!=='')
+      {
+        fetch(`http://localhost:3000/artist/${response.artist_id}`, {
+         method: 'PUT',
+          headers: {
+            'Content-type': 'application/json'
+          },
+          body: JSON.stringify(response)
+        })
+          if(!(alert(`Artist ${response.artist_id} updated successfully`)))
+          {
+            location.reload()
+          }
+        }
+        else {
+          alert('Name should not be empty!')
+        }
+    })
+
+
+    document.querySelectorAll('.btn-delete').forEach((row)=>{
+      row.addEventListener('click', (e)=>{
+         const id = e.target.dataset.artist;
+          if(confirm(`Are you sure you want to delete this artist ${id}?`))
+          {
+              fetch(`http://localhost:3000/artist/${id}`, {
+                method :"delete",
+                headers:{
+                  'Content-type' :"application/json"
+                }
+              }).then((response)=>{
+                console.log(response);
+                if(confirm(`Artist ${id} deleted successfully`))
+                {
+                  location.reload();
+                }
+              })
+          }
+      })
+    })
+  </script>
+</html>

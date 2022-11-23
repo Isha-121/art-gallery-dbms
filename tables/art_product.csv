@@ -1,0 +1,51 @@
+art_id,artist_id,sub_category,base_price,total_views,likes,dislikes
+art-1,a-3,nature art,$483,9383,393,293
+art-2,a-2,classical music,$0,8868,896,296
+art-3,a-3,cartoon art,$877,2777,787,187
+art-4,a-4,feature art,$15,6915,925,125
+art-5,a-5,street play,$0,7793,803,3
+art-6,a-6,nature art,$435,8335,345,245
+art-7,a-7,gestue art,$486,5386,396,296
+art-8,a-8,classical dance,$0,4920,502,202
+art-9,a-9,foreign music band,$0,6649,659,259
+art-10,a-10,feature art,$521,1421,431,131
+art-11,a-11,nature art,$462,2362,372,72
+art-12,a-12,dance,$0,2700,37,137
+art-13,a-11,gestue art,$790,8690,700,0
+art-14,a-14,music,$0,5900,69,269
+art-15,a-15,nature art,$863,7763,773,273
+art-16,a-16,gesture art,$26,3926,936,236
+art-17,a-17,cartoon art,$640,5400,550,250
+art-18,a-18,line drawing,$526,3426,436,136
+art-19,a-19,perspective drawing,$272,9172,182,182
+art-20,a-20,photorealism,$836,5736,746,146
+art-21,a-21,folk dance,$0,5211,221,21
+art-22,a-22,carnatic music,$0,5368,378,78
+art-23,a-19,line drawing,$667,2567,577,277
+art-24,a-17,nature art,$529,6429,439,139
+art-25,a-25,bollywood dance,$0,5782,792,192
+art-26,a-26,rock music,$0,1530,540,240
+art-27,a-15,cartoon art,$962,2862,872,72
+art-28,a-28,monologue drama,$0,5123,133,233
+art-29,a-29,gesture art,$167,4067,77,77
+art-30,a-30,nature art,$235,3135,145,245
+art-31,a-31,photorealism,$29,3929,939,39
+art-32,a-32,foreign music band,$0,9802,812,112
+art-33,a-33,cartoon art,$122,4022,32,232
+art-34,a-34,line drawing,$158,3058,68,268
+art-35,a-35,mime play,$0,3069,79,279
+art-36,a-36,monologue drama,$0,8167,177,277
+art-37,a-37,perspective drawing,$493,1393,403,203
+art-38,a-38,line drawing,$556,8456,466,266
+art-39,a-39,gesture art,$111,5011,21,221
+art-40,a-40,classical dance,$142,8042,52,152
+art-41,a-37,nature art,$329,6229,239,139
+art-42,a-42,photorealism,$473,7373,383,283
+art-43,a-43,line drawing,$521,4421,431,31
+art-44,a-44,folk dance,$203,4919,929,129
+art-45,a-45,classical music,$0,3784,794,294
+art-46,a-46,cartoon art,$637,8537,547,47
+art-47,a-47,bollywood dance,$0,5198,208,108
+art-48,a-37,photorealism,$424,4324,334,234
+art-49,a-49,carnatic music,$0,8315,325,225
+art-50,a-50,nature art,$470,4370,380,280
